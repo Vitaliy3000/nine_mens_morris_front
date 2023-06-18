@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Player from '../components/player/player.js'
 import Board from '../components/board/board.js'
+import Stone from '../components/stone/stone.js'
 
 
 // position: absolute;
@@ -12,11 +13,18 @@ import Board from '../components/board/board.js'
 
 
 export default function Home() {
+  const style = {
+      height: "800px",
+      width: "1600px",
+      display: "flex",
+      backgroundColor: "greenyellow",
+  };
+
   return (
-    <main className={styles.home}>
-      <Player className={styles.player}></Player>
-      <Board className={styles.board}></Board>
-      <Player className={styles.player}></Player>
+    <main style={style}>
+      <Player></Player>
+      <Board></Board>
+      <Player></Player>
 
       {/* </div>
       <div>
